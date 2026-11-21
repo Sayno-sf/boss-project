@@ -1,0 +1,58 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+import { Boss } from '../src/boss.mjs';
+
+test('已派任务固定技能文件，原员工读取后凭实际产物交接；历史反馈可再次复测',t=>{
+  const root=mkdtempSync(join(tmpdir(),'boss-team-'));
+  const boss=new Boss(root);
+  const previousThread=process.env.CODEX_THREAD_ID;
+  t.after(()=>{
+    if (previousThread===undefined) delete process.env.CODEX_THREAD_ID;
+    else process.env.CODEX_THREAD_ID=previousThread;
+    boss.close();rmSync(root,{recursive:true,force:true});
+  });
+  const source=join(root,'design');
+  mkdirSync(source);
+  writeFileSync(join(source,'SKILL.md'),'先从入口走一遍。');
+  writeFileSync(join(source,'route.txt'),'旧路线');
+  boss.init('隔离走馆');
+  for (const id of ['designer','verifier']) boss.bindRole({id,kind:'worker',title:id,threadId:id+'-chat'});
+  boss.startStage({id:'walk',title:'走馆',goal:'可独立到达第二厅',acceptance:['实际从正门走一遍']});
+  const profile=version=>boss.profile({role:'designer',specialty:'产品设计',responsibility:'导览路线',skills:[
+    {name:'走馆',version,directory:'design',resources:['route.txt']}]});
+  profile('v1');
+  const input={id:'route',role:'designer',text:'做导览样板',skillNames:['走馆'],handoff:{to:'verifier',acceptance:'从入口到第二厅',output:'路线样板'}};
+  const job=boss.enqueue(input);
+  writeFileSync(join(source,'SKILL.md'),'先查视线遮挡。');
+  writeFileSync(join(source,'route.txt'),'新路线');
+  profile('v2');
+  assert.equal(boss.enqueue(input).skills[0].version,'v1');
+  const first=boss.claim();assert.match(first.text,/验收动作：从入口到第二厅/);
+  boss.markSent({ids:first.ids,turnId:'design-turn'});
+  const reply={ids:first.ids,text:'设计已交接',sourceRef:'test:design',workEvidence:{artifact:'样板 v1',validation:'桌面走查',remaining:'手机待测'}};
+  assert.throws(()=>boss.complete(reply),/读取记录/);
+  process.env.CODEX_THREAD_ID='verifier-chat';assert.throws(()=>boss.readSkill({jobId:job.id,name:'走馆'}),/原员工/);
+  process.env.CODEX_THREAD_ID='designer-chat';
+  assert.equal(boss.readSkill({jobId:job.id,name:'走馆'}).instructions,'先从入口走一遍。');
+  assert.throws(()=>boss.complete(reply),/使用证据/);
+  reply.workEvidence.skillUse=[{name:'走馆',status:'used',evidence:'样板 v1 中有从入口到出口的验证录像'}];
+  boss.complete(reply);assert.ok(boss.complete(reply).duplicate);
+  assert.throws(()=>boss.complete({...reply,workEvidence:{...reply.workEvidence,artifact:'另一个样板'}}),/冲突/);
+  const feedback={id:'corner',category:'defect',text:'回程在岔口绕了一圈',sourceRef:'test:boss',owner:'verifier',scenario:'从二厅返回一厅',expected:'看见回程指向'};
+  boss.feedback(feedback);boss.feedback(feedback);
+  assert.throws(()=>boss.enqueue({id:'wrong',role:'designer',text:'错误交接',fromJob:'route'}),/尚未交付/);
+  boss.enqueue({id:'check',role:'verifier',text:'复测导览',fromJob:'route',feedbackIds:['corner']});
+  const check=boss.claim();assert.match(check.text,/样板 v1/);assert.match(check.text,/从二厅返回一厅/);
+  boss.markSent({ids:check.ids,turnId:'verify-turn'});
+  const verificationReply={...reply,ids:check.ids,workEvidence:{artifact:'走馆实录',validation:'往返复测',remaining:'手机待测'}};
+  assert.throws(()=>boss.complete(verificationReply),/回归结果/);
+  process.env.CODEX_THREAD_ID='verifier-chat';
+  for (const [outcome,version] of [['fail','v1'],['pass','v2']]) boss.regression({jobId:'check',feedbackId:'corner',outcome,version,evidence:'走馆实录 '+version});
+  boss.complete({...verificationReply,text:'复测已完成',sourceRef:'test:verification'});
+  assert.deepEqual(boss.status().jobs.check.checks.map(x=>x.outcome),['fail','pass']);
+  const newer=boss.enqueue({...input,id:'route-next'});assert.equal(newer.skills[0].version,'v2');
+  assert.notEqual(newer.skills[0].digest,job.skills[0].digest);
+});

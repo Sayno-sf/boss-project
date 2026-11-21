@@ -1,0 +1,72 @@
+{
+  "repository": "https://github.com/KKKKhazix/agent-autoloop",
+  "commit": "d3a44cac4460f4e0417c3d407baa853de7aa25ff",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "kernel/credentials.ts",
+      "gitBlobSha1": "d1d1a5b81bbbf17790f9321b00a0afd430ac2c8a",
+      "sha256": "1b2343615341e60937f9a2bf73948caf10d99d251988b94350bbe99ce0660e48"
+    },
+    {
+      "path": "kernel/cron.ts",
+      "gitBlobSha1": "44819d4ae0c0899223435552eecc8cb0dfca75a1",
+      "sha256": "0479d6d3fe348bf2f403da2e026a8315831c26a16e6bbe2ec8be5fc431270518"
+    },
+    {
+      "path": "kernel/decide.ts",
+      "gitBlobSha1": "e6dfde282ea7927c45d88993fc27ef71eadba1f9",
+      "sha256": "b358e86628282af3e899b844090b698a7880e9e24eb1774a61f6c5b3981e5143"
+    },
+    {
+      "path": "kernel/due.ts",
+      "gitBlobSha1": "78d71a47aaddb830227140f57a0073db35ce05dd",
+      "sha256": "7e0896e0b3f38068d5291e1eb70756662d106a7509f2064d22ef4586d706c4a3"
+    },
+    {
+      "path": "kernel/errors.ts",
+      "gitBlobSha1": "ac06445d037e82409d3318a9f5b6b747e6c5965b",
+      "sha256": "0804b397d8e21c9747ec2e6b5938580cc0405aac6f642e6e43b1ad658a7c4745"
+    },
+    {
+      "path": "kernel/evolve.ts",
+      "gitBlobSha1": "5359765f6b4f1c852e31f432a1b3dde5fa49b966",
+      "sha256": "3c0e567212af6939f43d570420f54091015900b7886ced793de373e488886116"
+    },
+    {
+      "path": "kernel/query.ts",
+      "gitBlobSha1": "38a6949c80c35aedcc336d4294d7c5282f727b15",
+      "sha256": "c565018c3c6eb44f91d93cb429498d1b2ca9d998b4d2af93debd26a4a6db6f7a"
+    },
+    {
+      "path": "kernel/rules.ts",
+      "gitBlobSha1": "a93305e47657b475baf32538e4378cea3603fc1e",
+      "sha256": "56ec655bada0d5729447ba69f6a9b12cbef767a052ea52c20f66e14970dfb65d"
+    },
+    {
+      "path": "kernel/store.ts",
+      "gitBlobSha1": "6f571cc2a9e70fdb2df58bf59f80fb97af5be84f",
+      "sha256": "934f690ed6a8e84dd1c807175b900420f5d91c1204b743f6c83819054086deea"
+    },
+    {
+      "path": "protocol/job.ts",
+      "gitBlobSha1": "762b9940014a00b4612336dfc6983b6e933f7ee0",
+      "sha256": "7c0e84aa091cab36ea43fe7adcb0dcfeeb362e2c01b8ca2b44f161cf225a8c89"
+    },
+    {
+      "path": "protocol/rules.ts",
+      "gitBlobSha1": "5189d00be6fdf941f3dbe5ae7319523a32468526",
+      "sha256": "008d22567896d6b84444cdf4c3b49c93a5408617f3e3887500007a62a10f6bcd"
+    },
+    {
+      "path": "protocol/validate.ts",
+      "gitBlobSha1": "85859ae8ff3aeeb88ef46a9969c4f1a1c314532b",
+      "sha256": "73547a3ad8dfa7fc693933d753418566b678406501d9fd02343f8783c91d4d4c"
+    },
+    {
+      "path": "LICENSE",
+      "gitBlobSha1": "2d848c9f3fed5317d59e0b88cafa289b42a29d2d",
+      "sha256": "b7f53d07ea4ae2eef26a4f8b28cb7d4df95586e2aa713df408f1ffde9f5a0fea"
+    }
+  ]
+}

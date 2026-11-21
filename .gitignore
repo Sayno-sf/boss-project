@@ -1,0 +1,26 @@
+# Private development workspace, local project state, and generated packages
+/.architect/
+/AGENTS.md
+.dev/
+.boss/
+dist/
+node_modules/
+*.zip
+__pycache__/
+*.py[cod]
+*.log
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+.env
+.env.*
+*.env
+!example.env
+*.pem
+*.key
+*.p12
+*.pfx
+.DS_Store
+Thumbs.db

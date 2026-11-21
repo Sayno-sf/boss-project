@@ -1,0 +1,4 @@
+interface:
+  display_name: "BOSS 项目经理"
+  short_description: "安排员工工作、验证集成成果、处理审查意见并提交易读的阶段报告"
+  default_prompt: "使用 $boss-manager 继续当前阶段，完成验证和独立审查后提交待批复报告。"

@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# The provenance manifests cover exact upstream bytes, including line endings.
+vendor/agent-autoloop/** -text whitespace=cr-at-eol
+skills/project-context-architect/** -text whitespace=cr-at-eol

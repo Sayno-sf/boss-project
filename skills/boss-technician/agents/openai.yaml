@@ -1,0 +1,4 @@
+interface:
+  display_name: "BOSS 老技术员"
+  short_description: "结合真实代码与工作记录解释技术流程，陪负责人理解报告和关键取舍"
+  default_prompt: "使用 $boss-technician 帮我理解当前项目的关键流程，并解读经理报告。"

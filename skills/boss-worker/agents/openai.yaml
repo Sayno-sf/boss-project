@@ -1,0 +1,4 @@
+interface:
+  display_name: "BOSS 项目员工"
+  short_description: "在持续保留的员工聊天中完成明确任务，提交真实验证并同步经理"
+  default_prompt: "使用 $boss-worker 继续我的职责范围内的任务，保留原始反馈与验证依据。"

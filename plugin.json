@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "boss-project",
+  "version": "0.3.0",
+  "description": "用可持续的角色聊天组织开发、独立审查、易读报告与 BOSS 阶段批复。",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/boss-project/SKILL.md",
+      "interface": {
+        "displayName": "BOSS 项目工作室",
+        "shortDescription": "与经理、技术员、审查员和员工直接交谈，按阶段掌握项目",
+        "longDescription": "面向 Codex 本地项目的持久角色聊天与阶段审批插件。复用 agent-autoloop 的调度机制和 project-context-architect 的项目文档规则。",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "defaultPrompt": ["使用 $boss-project 了解当前团队和阶段，按我的目标组织工作。"]
+      }
+    }
+  }
+}

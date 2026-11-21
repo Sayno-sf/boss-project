@@ -1,0 +1,13 @@
+{
+  "name": "boss-project",
+  "version": "0.3.0",
+  "description": "用可持续的角色聊天组织开发、独立审查、易读报告与 BOSS 阶段批复。",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "onboardingSkill": "./skills/boss-project/SKILL.md",
+  "interface": {
+    "displayName": "BOSS 项目工作室",
+    "shortDescription": "与经理、技术员、审查员和员工直接交谈，按阶段掌握项目",
+    "defaultPrompt": ["使用 $boss-project 了解当前团队和阶段，按我的目标组织工作。"]
+  }
+}

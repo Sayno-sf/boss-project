@@ -1,0 +1,4 @@
+interface:
+  display_name: "BOSS 项目入口"
+  short_description: "在固定角色聊天中组织开发、独立审查和阶段批复，让负责人掌握项目"
+  default_prompt: "使用 $boss-project 查看当前角色和阶段，按我的目标组织项目工作。"

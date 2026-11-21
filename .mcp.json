@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "boss-project": {
+      "command": "node",
+      "args": ["${PLUGIN_ROOT}/src/mcp.mjs"]
+    }
+  }
+}

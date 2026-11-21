@@ -1,0 +1,10 @@
+{
+  "protocol": "AGENTS.md",
+  "state": ".architect/PROJECT_STATE.md",
+  "limits": {
+    "state_chars": 12000,
+    "l0_chars": 16000,
+    "growth_chars": 2000,
+    "growth_ratio": 0.3
+  }
+}

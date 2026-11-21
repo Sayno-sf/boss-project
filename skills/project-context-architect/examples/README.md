@@ -1,0 +1,19 @@
+# Examples
+
+`bootstrap/` holds the authority files produced by running a BOOTSTRAP on a fictional small project (`remindr`, a daily-digest CLI plus web view). These files are the **register-and-density target**: when you write authority files, aim for files that look and feel like these — compact, present-focused, one fact per owner, links between owners — not for the bare templates.
+
+The project is invented. Do not copy its content into a real repository, all document links resolve within the example. Runtime source paths and command outcomes remain fictional.
+
+The root `AGENTS.md` points into `.architect/`, which holds current state and the optional technical owners.
+
+What each example demonstrates:
+
+- `AGENTS.md` — user-owned project rules preserved at the top, both protocols merged exactly once, no nested copies.
+- `.architect/PROJECT_STATE.md` — present tense, scaled to a small project, implemented vs planned kept apart, handoff capsule with pointers only.
+- `.architect/ARCHITECTURE.md` — entry points, data flow and ownership, with valid task links.
+- `.architect/DECISIONS.md` — created only because one decision has durable rationale.
+- `.architect/RUNBOOK.md` — commands labeled verified or unverified.
+
+The blockquote label at the top of each file marks it as an example artifact; it is not part of a real deliverable.
+
+When a real project already maintains a platform equivalent convention file (`CLAUDE.md`, `COPILOT.md`, and the like), the two root protocols merge into that file under its own name; `AGENTS.md` here is the default name, not a requirement.

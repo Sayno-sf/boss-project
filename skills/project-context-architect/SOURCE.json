@@ -1,0 +1,169 @@
+{
+  "source": "https://github.com/Sayno-sf/Project-context-architect",
+  "acquired": "2026-11-14",
+  "license": "MIT",
+  "copyright": "2026 lhq418899-sketch",
+  "adaptation": "Files copied without content changes; packaging excludes top-level repository maintenance and distribution documents.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "3cafe2ee3efe6ebd5f6537a773ca3827646eb281f7f14d7144d553baaf6fc9e0"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "180a61c1d8714ca02a6e26f2d92be38d992d1b319b61ee62e9e23f2c77ed6fa3"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "2b26ad97482d9fb8dad8678a7eedbda1af30fa37908ae0ff5d53fd343c88547d"
+    },
+    {
+      "path": "examples/README.md",
+      "sha256": "d4d95d8b8e38cbc8f980df0b22684842574c998526a42cf42fab98b3b25bffa3"
+    },
+    {
+      "path": "examples/bootstrap/AGENTS.md",
+      "sha256": "c6b8dff36bce5199cbd237013754751c1fc0d95961b04b472dfe3eea6a75498c"
+    },
+    {
+      "path": "examples/bootstrap/.architect/ARCHITECTURE.md",
+      "sha256": "75d9498d7c54a9018eb8dadf69c38cf49e6c5d3e163eda64b7c2e21a18c25f89"
+    },
+    {
+      "path": "examples/bootstrap/.architect/DECISIONS.md",
+      "sha256": "b7d18636468de47e551fcd119579a67cbf1e9cd1e38fbee7330de1c0506e1519"
+    },
+    {
+      "path": "examples/bootstrap/.architect/PROJECT_STATE.md",
+      "sha256": "54e3c9a156e5857935ad1acc1e9ec429f4dc387e3eb4e21c6f84f8635f44915d"
+    },
+    {
+      "path": "examples/bootstrap/.architect/RUNBOOK.md",
+      "sha256": "78f82d92f8f57316583265c8058219eadf4c3aaa0a68d8c8719dfce3e69e5e0d"
+    },
+    {
+      "path": "examples/integration/context-check.json",
+      "sha256": "1b71f9ac4b340ee7b7c1c1d7edc99abe09f8de33f9ba69a3e16b5ff1755e1167"
+    },
+    {
+      "path": "examples/integration/context-check.yml",
+      "sha256": "dde7c3fafaa80d760f4b170b255d46798464092a41dfe4235503fc4f0f628d73"
+    },
+    {
+      "path": "fixtures/README.md",
+      "sha256": "c6f1ce630a5be7a4288b3b7aa08166520ae7b69fa387d4f44a3766de848fef37"
+    },
+    {
+      "path": "fixtures/messy/AGENTS.md",
+      "sha256": "addb95da120c8b1d5078c190e5347d6294a1624f2afa7252b7cec4497a339dd5"
+    },
+    {
+      "path": "fixtures/messy/app.py",
+      "sha256": "b9b44c8734ca71387e3f79eb3a80a7838512f13ea7e70a1a874ed7de6b8fd155"
+    },
+    {
+      "path": "fixtures/messy/architecture-notes.md",
+      "sha256": "04824ca3d4f9d2eb5fca8ba4e283372c59686161f031ce62126887c33b359d8f"
+    },
+    {
+      "path": "fixtures/messy/PROJECT_STATE.md",
+      "sha256": "7bbc508adaaf2eb1e13de0013cc7ad0c8a3b85aee46e09ba1d684c68530e21e3"
+    },
+    {
+      "path": "fixtures/messy/README.md",
+      "sha256": "e261bd2003986fe8be08118aae92976779f5b7cb113be79d4c525cc5e29c902b"
+    },
+    {
+      "path": "fixtures/messy/requirements.txt",
+      "sha256": "5c93055b3ff1635ea806b341a5a5bd52dea05252bda1cbb2c74c63d3fc80521d"
+    },
+    {
+      "path": "fixtures/messy/sprint-review-2026-Q1.md",
+      "sha256": "a9e50db49a295e870870bbe58c643198aa76821ef61c9de91f719b68e440545b"
+    },
+    {
+      "path": "fixtures/messy/summarize.py",
+      "sha256": "b6c1728f49d225115740f1a8ce2cb9622e913d71599084ced2fb58c5e7303a0e"
+    },
+    {
+      "path": "fixtures/messy/TODO-old.md",
+      "sha256": "11657a2a01b2dd95ad8e79493081e4cf9781eeb82687b9cbebf93f81bb2ff654"
+    },
+    {
+      "path": "fixtures/messy/docs/old-prompts/prompt-2026-05.md",
+      "sha256": "0db3996a95ba577756b55e9dd33d8c596e0bca61294b0be3bb8eed40d9d4bb63"
+    },
+    {
+      "path": "fixtures/messy/tests/test_summarize.py",
+      "sha256": "f1efa66c4b853dee51fc26bea239c255b17b059608b0f2689d4f09a4cb5e652b"
+    },
+    {
+      "path": "references/authority-model.md",
+      "sha256": "a04cc1fbc403bd1f459463a4a715271ca65b3f999a18bee292009df3d4ba7b0c"
+    },
+    {
+      "path": "references/bootstrap.md",
+      "sha256": "a8e140b378c9648a76d16e9d07fb7160c3d803fe39b1c8a1167e03347e2e95ca"
+    },
+    {
+      "path": "references/check.md",
+      "sha256": "1ddf7a687e5f1d5a9f651c870c70e8c508fb44f4dd59a6791500d68b116a4824"
+    },
+    {
+      "path": "references/fresh-session-test.md",
+      "sha256": "f48c71714995459a799f86d5bb3acf3154ce97917b0a2b5af656de14d7e858a7"
+    },
+    {
+      "path": "references/maintenance.md",
+      "sha256": "0db9ba940fd84a77acf78c96c887df2f2cc7f42e336e46cb2c480e420f616870"
+    },
+    {
+      "path": "references/project-checks.md",
+      "sha256": "bb203c5ecae9c71c2ff8302a5af23aa45295c7a47170e72c9f92a274fd97edba"
+    },
+    {
+      "path": "references/refactor.md",
+      "sha256": "0e1cbb7eedfe23b6b09be0526e25382772d9899ed25fb6bea61d3424d5d8e3e7"
+    },
+    {
+      "path": "scripts/check_discovery.py",
+      "sha256": "ce1f2d805952bae25be8c1a1e3aa197d61216d84364915f182fdd4fdcec1896d"
+    },
+    {
+      "path": "scripts/check_fixture.py",
+      "sha256": "0e7f4d27fe74b03879bd4457bd467160ec3eb54a80c343c5c8e84d8cf039ae75"
+    },
+    {
+      "path": "scripts/check_project_context.py",
+      "sha256": "684e123075f5430f94c3a8a30b906c12029442deb46ca68b540f17b137891a95"
+    },
+    {
+      "path": "scripts/document_checks.py",
+      "sha256": "f8d367bb285580a6c2656722c97a41456267cfc8151ebcfa68d029af925aaac4"
+    },
+    {
+      "path": "scripts/lint_skill.py",
+      "sha256": "8565ad262cba7518a7e891b2b9a23d897ccb5ff78ce92f44aac1cfc745ea07f1"
+    },
+    {
+      "path": "scripts/README.md",
+      "sha256": "2356b2616a2bc28e6dd0e1d48791f278be8a8ced7696cd2dbb87cec83dd8afc5"
+    },
+    {
+      "path": "scripts/test_discovery.py",
+      "sha256": "f4fa6d07ffa0c6b2f3998ce1906305c7426ce0c5eab4c27496c0dbd445744f0a"
+    },
+    {
+      "path": "scripts/test_project_context.py",
+      "sha256": "6aac10d4102ede6e5aefaa297ba6903a3ba057bb16aedfc701b4846205b32cf3"
+    },
+    {
+      "path": "scripts/test_validation.py",
+      "sha256": "8e21def543dc75e7fc95e3659046904b9d8718881672a0f5d7d564eb7b9453f3"
+    },
+    {
+      "path": "scripts/verify_refactor.py",
+      "sha256": "e34e8466ca9eadd8adddbfc5740fa1e8bbac3c92f0333560a975bf4df0c36b42"
+    }
+  ]
+}

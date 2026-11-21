@@ -1,0 +1,4 @@
+interface:
+  display_name: "BOSS 独立审查员"
+  short_description: "直接核查实际成果与原始证据，给出有依据的审查结论和解除条件"
+  default_prompt: "使用 $boss-reviewer 独立检查当前阶段成果、验证记录和报告是否一致。"
